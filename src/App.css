@@ -1,0 +1,502 @@
+/* ----------------- HEADER -------------------------------- */
+.hr {
+    padding-top: 5px;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: rgb(175, 142, 93);
+    justify-content: space-around;
+    padding: 5px;
+    align-items: center;
+   z-index: 1000;
+   position: fixed;
+}
+
+.header img {
+    width: 45px;
+    filter: drop-shadow(2px 2px 4px black);
+}
+
+.header nav {
+    padding-left: 10px;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.header nav a {
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+.header nav a:hover {
+    font-weight: bolder;
+    color: rgb(240, 162, 72);
+    filter: drop-shadow(2px 2px 4px black)
+}
+
+.header .titulo h2 {
+    padding-left: 40px;
+    color: gold;
+    text-shadow: 2px 2px 4px black;
+}
+
+.header .titulo {
+    justify-content: center;
+}
+
+/* ----------------- CARTWIDGETS --------------------------- */
+
+.carrito {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.carrito p {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.carrito img {
+    width: 40px;
+}
+
+/* ----------------- ITEMLISTCONTAINER --------------------------- */
+
+.greeting {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* ----------------- CARRUSEL --------------------------- */
+
+.carrusel {
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+.carrusel-images {
+    display: flex;
+    animation: slide 16s infinite;
+}
+
+.image {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-100%);
+    }
+
+    45% {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        transform: translateX(-200%);
+    }
+
+    70% {
+        transform: translateX(-200%);
+    }
+
+    75% {
+        transform: translateX(-300%);
+    }
+
+    95% {
+        transform: translateX(-300%);
+    }
+
+    100% {
+        transform: translateX(-400%);
+    }
+}
+
+/* ----------------- ITEMDETAILCONTAINER --------------------------- */
+
+.card-detail {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: chocolate;
+    gap: 10px;
+}
+
+.card {
+    width: 150px;
+    height: auto;
+    border-style: groove;
+    overflow: hidden;
+    background-color: burlywood;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.card img {
+    max-width: 150px;
+    height: auto;
+    object-fit:contain;
+}
+
+/* ----------------- ITEMDETAIL --------------------------- */
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: rgba(179, 150, 108, 0.445);
+    text-align: center;
+}
+
+.card-container .card2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+    text-align: center;
+}
+
+.card-container .count {
+    padding: 30px;
+}
+
+.card-container .count .terminar {
+    border-radius: 10px;
+    padding: 10px;
+    border-style: groove;
+    border-color: rgb(148, 88, 10);
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(87, 45, 15);
+}
+
+.card-container .count .terminar:hover {
+    color: rgb(255, 208, 0);
+    background-color: rgb(255, 0, 0);
+}
+
+/* ----------------- ITEM --------------------------- */
+
+.detalle {
+    padding: 5px;
+    margin: 5px;
+    font-weight: bold;
+    color: rgb(94, 58, 25);
+    border-radius: 10%;
+}
+
+.detalle:hover {
+    color: rgb(255, 208, 0);
+    background-color: red;
+}
+
+/* ----------------- NUEVO CARRUSEL --------------------------- */
+
+.carru-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    width: 100%;
+    height: 180px;
+}
+
+.carru {
+
+    width: 150px;
+    height: 180px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: gallary 20s linear infinite;
+    cursor: pointer;
+}
+
+.carru span {
+    position: absolute;
+    transform: rotateY(calc(var(--i) * 72deg)) translateZ(180px);
+}
+
+.carru span img {
+    width: 220px;
+    height: 150px;
+    object-fit: cover;
+}
+
+@keyframes gallary {
+    from {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+
+    to {
+        transform: perspective(1000px) rotateY(-360deg);
+    }
+}
+
+/* ----------------- LINKS --------------------------- */
+
+.links {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    justify-content: center;
+}
+.links img {
+    width: 60px;
+    padding: 10px;
+}
+
+.links a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(129, 72, 19);
+    padding-bottom: 10px;
+}
+.links a:hover {
+    color: rgb(235, 11, 11);
+}
+
+/* ----------------- LINKS --------------------------- */
+
+.item-count .operacion {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    color: rgb(117, 90, 16);
+    font-weight: bolder;
+    font-size: 20px;
+}
+.item-count .operacion:hover {
+    color: red;
+    background-color: goldenrod;
+}
+
+/* ----------------- CONTACTO --------------------------- */
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: auto;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px;
+    background-color: rgba(129, 70, 27, 0.733);
+}
+
+.contacto .cont {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(240, 248, 255, 0.144);
+    border-style: groove;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.contacto .cont .redes {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.contacto .cont .redes .redes-logo p {
+    font-weight: bolder;
+    font-size: 18px;
+    padding: 10px;
+    text-shadow: 2px 2px 5px whitesmoke;
+}
+
+.contacto .cont .redes .redes-logo img {
+    width: 50px;
+    filter: drop-shadow(2px 2px 4px black);
+}
+
+.contacto  h3 {
+    padding: 10px;
+}
+
+/* ----------------- CARRITO --------------------------- */
+
+.carrito {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    background-color: rgba(210, 105, 30, 0.719);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    gap: 20px; 
+}
+
+.itemCart {
+    padding: 30px;
+}
+
+.itemCart img {
+    width: 350px; 
+    height: auto;
+    object-fit: contain; 
+}
+
+
+.itemCart button {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    border-style: groove;
+    color: rgb(117, 90, 16);
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.itemCart button:hover {
+    color: red;
+    background-color: goldenrod;
+}
+
+.boton-total {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    border-style: groove;
+    color: rgb(117, 90, 16);
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.boton-total:hover {
+    color: red;
+    background-color: goldenrod;
+}
+
+.carrito-vacio {
+    width: 100%;
+    height: 250px;
+    margin-top: 60px;
+    background-color: rgba(210, 105, 30, 0.719);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    gap: 20px;
+    font-size: 18px;
+}
+
+.carrito-vacio .compra {
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(102, 56, 18);
+}
+
+.carrito-vacio h2 {
+    display: flex;
+}
+
+.carrito-vacio .carrito-vacio-img {
+    margin: 5px;
+    width: 30px;
+}
+
+/* ----------------- FORMULARIO DE CHECKOUT --------------------------- */
+
+.formulario {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 65px;
+    padding: 40px;
+    background-color: rgba(197, 155, 99, 0.623);
+}
+
+.formulario h2 {
+    padding-bottom: 30px ;
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    border-style: groove;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.formulario form .label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 70%;
+    flex-wrap: wrap;
+}
+
+.formulario form .label input {
+    height: 30px;
+    border-radius: 10px;
+    border-style: groove;
+    box-shadow: 2px 2px 4px black;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.formulario form .boton-enviar button {
+    padding: 5px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border-style: groove;
+    box-shadow: 2px 2px 4px black;
+    font-weight: bolder;
+}
+
+.formulario form .boton-enviar button:hover {
+    color: rgb(247, 188, 39);
+    background-color: rgb(151, 85, 23);
+}

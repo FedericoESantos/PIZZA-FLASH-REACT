@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "title": "Muzzarella",
+        "description": "Pizza clásica con trozos de muzzarella",
+        "img": "/productos/muzzarella.jpg",
+        "price": 1500,
+        "stock": 10,
+        "category": "pizzas"
+    },
+    {
+        "id": 2,
+        "title": "Cebolla",
+        "description": "Pizza con trozos de cebolla y muzzarella",
+        "img": "/productos/cebolla.jpg",
+        "price": 1600,
+        "stock": 10,
+        "category": "pizzas"
+    },
+    {
+        "id": 3,
+        "title": "Roquefort",
+        "description": "Pizza con trozos de roquefort y muzzarella",
+        "img": "/productos/roquefort.jpg",
+        "price": 1800,
+        "stock": 10,
+        "category": "pizzas"
+    },
+    {
+        "id": 4,
+        "title": "Especial",
+        "description": "Pizza con trozos de muzzarella y tomate",
+        "img": "/productos/especial.jpg",
+        "price": 1600,
+        "stock": 10,
+        "category": "pizzas"
+    },
+    {
+        "id": 5,
+        "title": "Calabresa",
+        "description": "Pizza con trozos de muzzarella y calabresa",
+        "img": "/productos/calabresa.jpg",
+        "price": 1800,
+        "stock": 10,
+        "category": "pizzas"
+    },
+    {
+        "id": 6,
+        "title": "Pan Dulce",
+        "description": "Pan dulce solo o relleno de chipas de chocolate",
+        "img": "/productos/panDulce.jpg",
+        "price": 1000,
+        "stock": 10,
+        "category": "postres"
+    },
+    {
+        "id": 7,
+        "title": "Biscochuelo",
+        "description": "Clásico biscochuelo esponjoso",
+        "img": "/productos/biscochuelo.jpg",
+        "price": 800,
+        "stock": 10,
+        "category": "postres"
+    },
+    {
+        "id": 8,
+        "title": "Frutilla",
+        "description": "Torta de frutilla rellena con crema",
+        "img": "s",
+        "price": 1400,
+        "stock": 10,
+        "category": "postres"
+    }
+]
