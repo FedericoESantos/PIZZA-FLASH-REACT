@@ -6,13 +6,12 @@
 .header {
     display: flex;
     width: 100%;
-    height: auto;
+    height: 80px;
     background-color: rgb(175, 142, 93);
     justify-content: space-around;
     padding: 5px;
     align-items: center;
-   z-index: 1000;
-   position: fixed;
+    z-index: 1000;
 }
 
 .header img {
