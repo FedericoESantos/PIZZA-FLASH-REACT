@@ -4,7 +4,7 @@ import CartWidget from "../CartWidget/CartWidget"
 const Header = () => {
     return (
         <div className="header">
-            <img src="/public/logo-cocina.png" alt="logo-cocina" />
+            <img src="/logo-cocina.png" alt="logo-cocina" />
             <nav>
                 <Link to="/">Inicio</Link>
                 <Link to="/category/postres">Postres</Link>
