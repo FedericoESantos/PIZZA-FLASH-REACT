@@ -372,16 +372,17 @@
 }
 
 .itemCart img {
-    width: 350px; 
+    width: 300px; 
     height: auto;
-    object-fit: contain; 
+    object-fit: cover; 
+    padding-bottom: 10px;
 }
 
 
 .itemCart button {
     margin: 10px;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 30px;
     border-style: groove;
     color: rgb(117, 90, 16);
     font-weight: bolder;
