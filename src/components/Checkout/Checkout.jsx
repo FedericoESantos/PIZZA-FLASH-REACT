@@ -1,136 +1,7 @@
-// import { useState } from "react"
-// import { useCartContext } from "../Context/CartContext"
-// import { addDoc, collection, doc, Firestore, getDoc, getFirestore, updateDoc } from "firebase/firestore"
-
-// const Checkout = () => {
-//     const [nombre, setNombre] = useState("")
-//     const [apellido, setApellido] = useState("")
-//     const [telefono, setTelefono] = useState("")
-//     const [mail, setMail] = useState("")
-//     const [confirmarMail, setConfirmarMail] = useState("")
-//     const [error, setError] = useState("")
-//     const [ordenId, setOrdenId] = useState("")
-//     const [mensaje, setMensaje] = useState("")
-
-//     const { cart, totalPrice, removeProduct } = useCartContext()
-
-
-//     const manejadorFormulario = (evento) => {
-//         evento.preventDefault()
-
-//         if (!nombre || !apellido || !telefono || !mail || !confirmarMail) {
-//             setError("Por favor complete los campos requeridos")
-//             return
-//         }
-//         if (mail !== confirmarMail) {
-//             setError("Los emails no coinciden")
-//         }
-
-//         const total = totalPrice();
-//         const orden = {
-//             items: cart.map((producto) => ({
-//                 id: producto.id,
-//                 nombre: producto.title,
-//                 cantidad: producto.quantity,
-//             })),
-//             total: total,
-//             fecha: new Date(),
-//             nombre,
-//             apellido,
-//             telefono,
-//             mail,
-//         }
-
-//         const actualizarStock = orden.items.map(async (prodOrder) => {
-//             const db = getFirestore();
-//             const prodRef = doc(db, "products", prodOrder.id);
-
-//             const productoDoc = await getDoc(prodRef);
-//             const stockActual = productoDoc.data().stock;
-
-//             if (stockActual < prodOrder.cantidad) {
-//                 throw new Error(`No hay suficiente stock para el producto ${prodOrder.nombre}`);
-//             }
-
-//             return updateDoc(prodRef, {
-//                 stock: stockActual - prodOrder.cantidad,
-//             });
-//         });
-
-//         Promise.all(actualizarStock)
-
-
-//         setNombre("")
-//         setApellido("")
-//         setTelefono("")
-//         setMail("")
-//         setConfirmarMail("")
-//         setMensaje("")
-//     }
-
-//     return (
-//         <div>
-//             <h2>Complete el formulario para confirmar la compra</h2>
-
-//             <form onSubmit={manejadorFormulario}>
-
-//                 {cart.map((producto) => {
-//                     <div key={producto.id}>
-//                         <p>{""} {producto.nombre} {"\n" + producto.cantidad}</p>
-//                         <p>{producto.precio}</p>
-//                     </div>
-//                 })}
-
-//                 <div className="label">
-//                     <label>Nombre: </label>
-//                     <input type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} />
-//                 </div>
-
-//                 <div className="label">
-//                     <label>Apellido: </label>
-//                     <input type="text" value={apellido} onChange={(e) => setApellido(e.target.value)} />
-//                 </div>
-
-//                 <div className="label">
-//                     <label>Telefono:</label>
-//                     <input type="text" value={telefono} onChange={(e) => setTelefono(e.target.value)} />
-//                 </div>
-
-//                 <div className="label">
-//                     <label>Mail:</label>
-//                     <input type="text" value={mail} onChange={(e) => setMail(e.target.value)} />
-//                 </div>
-
-//                 <div className="label">
-//                     <label>Confirmar Email</label>
-//                     <input type="text" value={confirmarMail} onChange={(e) => setConfirmarMail(e.target.value)} />
-//                 </div>
-
-//                 {error && <p>{error}</p>}
-//                 {ordenId && (
-//                     <p> ¡ Gracias por tu Compra !. Tu Número de seguimiento es:
-//                         <br />
-//                         <strong>{""} {ordenId} {""}</strong>
-//                         <br />
-//                     </p>
-//                 )}
-
-//                 <div className="boton-enviar">
-//                     <button type="submit">
-//                         Finalizar Compra
-//                     </button>
-//                 </div>
-//             </form>
-
-//         </div>
-//     )
-// }
-
-// export default Checkout
-
 import { useState } from "react";
 import { useCartContext } from "../Context/CartContext";
 import { addDoc, collection, doc, getDoc, getFirestore, updateDoc } from "firebase/firestore";
+import { Link, Links } from "react-router-dom";
 
 const Checkout = () => {
     const [nombre, setNombre] = useState("");
@@ -285,7 +156,9 @@ const Checkout = () => {
                         ¡Gracias por tu compra! Tu número de seguimiento es:
                         <strong>{ordenId}</strong> <br />
                         A la brevedad nos comunicaremos contigo para coordinar la entrega, <br />
-                        con el número de seguimiento.
+                        con el número de seguimiento. <br />
+                        <Links to={"/"}>Regresar al Home <br /><img src="/iconos/hogar.png" alt="" /></Links>
+                        
                     </p>
                 )}
 
