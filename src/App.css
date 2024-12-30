@@ -181,7 +181,6 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    padding-top: 80px;
     text-align: center;
 }
 
@@ -225,8 +224,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     margin-top: 30px;
-    width: 100%;
+    width: 70%;
     height: 180px;
 }
 
@@ -355,7 +355,6 @@
 .carrito {
     width: 100%;
     height: auto;
-    margin-top: 50px;
     background-color: rgba(210, 105, 30, 0.719);
     display: flex;
     flex-direction: column;
@@ -365,10 +364,6 @@
     text-align: center;
     padding: 20px;
     gap: 20px; 
-}
-
-.itemCart {
-    padding: 30px;
 }
 
 .itemCart img {
@@ -412,7 +407,6 @@
 .carrito-vacio {
     width: 100%;
     height: 250px;
-    margin-top: 60px;
     background-color: rgba(210, 105, 30, 0.719);
     display: flex;
     flex-direction: column;
@@ -468,6 +462,23 @@
     border-style: groove;
     border-radius: 15px;
     padding: 30px;
+    text-align: center;
+}
+
+.formulario form a {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(224, 225, 226);
+    font-size: 19px;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+.formulario form a:hover {
+    color: red;
+}
+
+.formulario form a img {
+    width: 80px;
 }
 
 .formulario form .label {

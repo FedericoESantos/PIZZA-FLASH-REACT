@@ -157,7 +157,7 @@ const Checkout = () => {
                         <strong>{ordenId}</strong> <br />
                         A la brevedad nos comunicaremos contigo para coordinar la entrega, <br />
                         con el número de seguimiento. <br />
-                        <Links to={"/"}>Regresar al Home <br /><img src="/iconos/hogar.png" alt="" /></Links>
+                        <a href="/"><img src="/iconos/hogar.png" alt="" /><br />Regresar al Home </a>
                         
                     </p>
                 )}
